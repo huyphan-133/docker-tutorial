@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Check if the required arguments are provided
 if [ "$#" -ne 2 ]; then
@@ -18,7 +18,7 @@ cd temp_repo
 docker build -t temp_image .
 
 # Log in to Docker Hub (you may need to replace 'your_docker_username' with your Docker Hub username)
-docker login -u icbombomci
+docker login
 
 # Tag the Docker image with the Docker Hub repository name
 docker tag temp_image "$docker_repo"
